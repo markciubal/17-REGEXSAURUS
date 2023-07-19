@@ -3,6 +3,9 @@ import express from 'express';
 import exphbs from 'express-handlebars';
 import router from './controllers/index.js';
 import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3002;
