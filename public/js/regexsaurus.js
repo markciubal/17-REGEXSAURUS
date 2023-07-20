@@ -4,7 +4,7 @@ const regexsaurusHandler = async (event) => {
     event.preventDefault();
     // TODO: Add a comment describing the functionality of these expressions
     const regex = document.querySelector('#regex').value.trim();
-    const regexOutput = document.querySelector('#regexOutput');
+    const regexOutput = document.querySelector('#regex-output');
     const devourButton = document.querySelector('#devour-button');
     const devourText = document.querySelector('#devour-text');
     const devourSpinner = document.querySelector('#devour-spinner');

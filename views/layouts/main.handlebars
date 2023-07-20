@@ -14,16 +14,28 @@
     <main>
         <div class="row justify-content-center align-items-center text-center">
             <div class="col">
-                <h1>Type in JavaScript REGEX and REGEXSAURUS will devour it!</h1>
-                <h2>Foreward: REGEX is short for "regular expressions".</h2>
+                <h1>REGEXSAURUS</h1>
+                <h2>Type in JavaScript REGEX and we'll devour it!</h2>
                 <form class="regex-form m-3">
-                  <textarea id="regex" class="m-2 w-100 mx-auto"></textarea>
-                  <button class="btn btn-success mx-auto" id="devour-button" type="submit">
+                  <textarea id="regex" class="m-2 w-100 mx-auto">/^#?([a-f0-9]{6}|[a-f0-9]{3})$/</textarea>
+                  <button class="btn btn-light mx-auto" id="devour-button" type="submit">
                     <span class="spinner-border spinner-border-sm" role="status" id="devour-spinner" style="display: none;"></span>
                     <span id="devour-text">Devour</span>
                   </button>
                 </form>
-                <pre class="w-100 vh-100" id="regexOutput">An explanation of the REGEX you provide will be displayed here.</pre>
+                <h2>REGEX Explanation</h2>
+                <pre class="w-100" id="regex-output">REGEX can be simple, and it can be difficult. Hopefully this interacive guide can help clarify the concept.<br/>
+You can tell if something is REGEX in JavaScript when it is sandwitched between two forward slashes: / and /.<br/>
+After that, the inside is just a bunch of letters, numbers, and symbols that represent different patterns.<br/>
+To start a pattern, you will use a ^ (caret) character. To end a pattern, use the $ character. So to put together what we've learned so far, REGEX can look like /^ to start, and to end: $/.
+After that, it's more symbols! [a-z] means any letter, a through z, lowercase. [A-Z] means the same, but uppercase. To put them together, you'd use [a-zA-Z].<br/>
+We can start to look at patterns and get a good understanding of more REGEX rules by breaking down a pattern.<br/>
+A basic one identifies possible hexadecimal values for colors: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/<br/>
+Like we learned before, a pattern starts matching with /^ and ends with $/.<br/>
+Then, the # sign is a literal # symbol, the ? next to it indicating that the sign is optional.<br/>
+Then, the parentheses indicates a pattern grouping of either a-f, 0-9 repeating either 6 times, annotated by {6}, or 3 times, annotated by {3}.<br/>
+Use the text box above to use the rules below, and through practice you can start to see and create REGEX patterns more easily!
+                </pre>
             </div>
         </div>
     </main>
